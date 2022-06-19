@@ -118,6 +118,8 @@ namespace osuCrypto
             init(rows, columns);
         }
 
+        
+
         void init(u64 rows, std::vector<ColumnInfo> columns)
         {
             mColumns.reserve(columns.size());

@@ -2,6 +2,7 @@
 #include <cryptoTools/Crypto/PRNG.h>
 #include <iomanip>
 #include <cryptoTools/Common/Log.h>
+#include <iostream>
 using namespace oc;
 namespace aby3
 {
@@ -15,10 +16,14 @@ namespace aby3
 
     void Sh3Evaluator::init(u64 partyIdx, CommPkg& comm, block seed, u64 buffSize)
     {
+        std::cout << "Sh3Eva beginning"<< std::endl;
         mShareGen.init(comm, seed, buffSize);
+        std::cout << "Sh3Eva beginning 1"<< std::endl;
         mPartyIdx = partyIdx;
+        std::cout << "Sh3Eva beginning 2"<< std::endl;
         mOtPrev.setSeed(mShareGen.mNextCommon.get<block>());
         mOtNext.setSeed(mShareGen.mPrevCommon.get<block>());
+        std::cout << "Sh3Eva finished"<< std::endl;
     }
 
     //void Sh3Evaluator::mul(

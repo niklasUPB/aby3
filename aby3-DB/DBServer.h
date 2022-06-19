@@ -30,7 +30,8 @@ namespace osuCrypto
         aby3::Sh3Encryptor mEnc;
 
         void init(u64 idx, Session& prev, Session& next, PRNG& prng);
-
+        
+        
 
         SharedTable localInput(Table& t);
         SharedTable remoteInput(u64 partyIdx);

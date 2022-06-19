@@ -1689,7 +1689,7 @@ namespace osuCrypto
         return r;
     }
 
-
+    //
     u64 SharedTable::rows()
     {
         return mColumns.size() ? mColumns[0].rows() : 0;

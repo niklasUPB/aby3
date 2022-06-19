@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.18)
+cmake_minimum_required (VERSION 3.15)
 
 project(aby3 VERSION 1.0.0)
 
@@ -77,6 +77,9 @@ endif()
 #############################################
 add_subdirectory(aby3)
 add_subdirectory(aby3-DB)
+
+add_subdirectory(hello)
+add_subdirectory(db)
 
 add_subdirectory(aby3-ML)
 add_subdirectory(aby3-DB_tests)

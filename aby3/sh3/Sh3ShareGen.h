@@ -1,6 +1,7 @@
 #pragma once
 #include "Sh3Types.h"
 #include <cryptoTools/Crypto/PRNG.h>
+#include <iostream>
 
 namespace aby3
 {
@@ -24,10 +25,15 @@ namespace aby3
 
         void init(CommPkg& comm, block& seed, u64 buffSize = 256)
         {
+            std::cout << "Sh3ShareGen.h beginning"<< std::endl;
             comm.mNext.asyncSendCopy(seed);
             block prevSeed;
-            comm.mPrev.recv(prevSeed);
+            //comm.mPrev.recv(prevSeed);
+            comm.mPrev.asyncRecv(prevSeed);
+            //std::cout << "Sh3ShareGen.h mid"<< std::endl;
             init(prevSeed, seed, buffSize);
+            //std::cout << "Sh3ShareGen.h end"<< std::endl;
+
         }
 
 

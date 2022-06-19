@@ -5,11 +5,6 @@
 namespace aby3
 {
 
-
-
-
-
-
 	Sh3Task Sh3Task::then(RoundFunc task)
 	{
 		return getRuntime().addTask({ this, 1 }, std::move(task), {});
