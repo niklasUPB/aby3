@@ -131,7 +131,7 @@ void DB_Intersect(u32 rows, u32 cols, u32 intersect  , bool sum)
 
 
 		auto end = srvs[i].join( SharedTable::ColRef(C, C.mColumns[0]) ,SharedTable::ColRef(intermediate, intermediate.mColumns[0])  , Second_Select_collumns  );
-
+		
 
 /*
 
@@ -142,35 +142,6 @@ void DB_Intersect(u32 rows, u32 cols, u32 intersect  , bool sum)
 		
 */
 		if (i == 0) t.setTimePoint("intersect");
-		if (sum)
-		{
-
-			Sh3BinaryEvaluator eval;
-
-			BetaLibrary lib;
-			BetaCircuit* cir = lib.int_int_add(64, 64, 64);
-
-		
-
-			auto task = srvs[i].mRt.noDependencies();
-
-			sbMatrix AA(C.rows(), 64), BB(C.rows(), 64), CC(C.rows(), 64);
-			task = eval.asyncEvaluate(task, cir, srvs[i].mEnc.mShareGen, { &AA, &BB }, { &CC });
-
-			Sh3Encryptor enc;
-			if (i == 0)
-			{
-				i64Matrix m(C.rows(), 1);
-				enc.reveal(task, CC, m).get();
-			}
-			else
-				enc.reveal(task, 0, CC).get();
-
-
-			if (i == 0)
-				t.setTimePoint("sum");
-		}
-
 		
 		if (intermediate.rows())
 		{
@@ -231,5 +202,5 @@ void print_all_of_tabel(SharedTable T, int i, DBServer server[]){
 
 
 int main(int argc, char* argv[]){
-	DB_Intersect(10,3,5,  true);
+	DB_Intersect(argv[1],argv[2],argv[3],  false);
 }
