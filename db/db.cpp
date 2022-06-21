@@ -202,5 +202,5 @@ void print_all_of_tabel(SharedTable T, int i, DBServer server[]){
 
 
 int main(int argc, char* argv[]){
-	DB_Intersect(argv[1],argv[2],argv[3],  false);
+	DB_Intersect( atoi(argv[1]), atoi(argv[2]), atoi(argv[3]),  false);
 }
