@@ -15,16 +15,17 @@ using namespace oc;
 
 void print_all_of_tabel(SharedTable T, int i, DBServer server[]);
 
-void DB_Intersect(u32 rows, u32 cols, u32 intersect  , bool sum)
+void DB_Intersect(u32 rows = 100, u32 cols = 3, u32 intersect = 30  )
 {
 	using namespace aby3;
 	IOService ios;
-	Session s01(ios, "127.0.0.1", SessionMode::Server, "01");
-	Session s10(ios, "127.0.0.1", SessionMode::Client, "01");
-	Session s02(ios, "127.0.0.1", SessionMode::Server, "02");
-	Session s20(ios, "127.0.0.1", SessionMode::Client, "02");
-	Session s12(ios, "127.0.0.1", SessionMode::Server, "12");
-	Session s21(ios, "127.0.0.1", SessionMode::Client, "12");
+	Session s01(ios, "127.0.0.1:50011", SessionMode::Server, "01");
+	Session s10(ios, "127.0.0.1:50010", SessionMode::Client, "01");
+	Session s02(ios, "127.0.0.1:50022", SessionMode::Server, "02");
+	Session s20(ios, "127.0.0.1:50020", SessionMode::Client, "02");
+	Session s12(ios, "127.0.0.1:50033", SessionMode::Server, "12");
+	Session s21(ios, "127.0.0.1:50030", SessionMode::Client, "12");
+	
 
 	
 	PRNG prng(oc::ZeroBlock);
@@ -32,6 +33,7 @@ void DB_Intersect(u32 rows, u32 cols, u32 intersect  , bool sum)
 	srvs[0].init(0, s02, s01, prng);
 	srvs[1].init(1, s10, s12, prng);
 	srvs[2].init(2, s21, s20, prng);
+	//s01.mBase.get()->mGroup.get()->mSockets.front().mSocket
 	
 
 
@@ -202,5 +204,11 @@ void print_all_of_tabel(SharedTable T, int i, DBServer server[]){
 
 
 int main(int argc, char* argv[]){
-	DB_Intersect( atoi(argv[1]), atoi(argv[2]), atoi(argv[3]),  false);
+	if(argc == 4){
+		DB_Intersect( atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
+	}
+	else{
+		DB_Intersect();
+	}
+
 }
