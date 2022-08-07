@@ -80,6 +80,7 @@ add_subdirectory(aby3-DB)
 
 add_subdirectory(hello)
 add_subdirectory(db)
+add_subdirectory(use_case2)
 
 add_subdirectory(aby3-ML)
 add_subdirectory(aby3-DB_tests)
