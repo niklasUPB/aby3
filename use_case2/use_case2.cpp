@@ -489,7 +489,7 @@ void use_case2(u32 rows = 10, u32 cols = 3, u32 intersect = 30)
 		{
 			int k = 1;
 			if(j %2 == 0) k = 1;
-			a.mColumns[i].mData(j, 0) = ((rand() %1000)+500) *k;
+			a.mColumns[i].mData(j, 0) = ((rand() %1000)) *k;
 			b.mColumns[i].mData(j, 0) = (rand() %1000 );
 			com.mColumns[i].mData(j, 0) = (rand() %100 );
 		}
