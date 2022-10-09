@@ -115,8 +115,9 @@ void print_all_of_tabel(SharedTable T, int i, DBServer server[]){
 
 }
 
-void use_case1(u32 rows = 10, u32 cols = 3, u32 intersect = 3 )  {
+void use_case1(u32 rows = 10, u32 intersect = 3)  {
 	using namespace aby3;
+	u32 cols =3;
 	IOService ios;
 	Session s01(ios, "127.0.0.1:5001", SessionMode::Server, "01");
 	Session s10(ios, "127.0.0.1:5001", SessionMode::Client, "01");
@@ -208,11 +209,11 @@ void use_case1(u32 rows = 10, u32 cols = 3, u32 intersect = 3 )  {
 		
 		if (result.rows())
 		{
-			if(i==0) std:: cout << "A" << std::endl;
-			print_all_of_tabel(A, i , srvs );
-			if(i==0) std:: cout << "B" << std::endl;
-			print_all_of_tabel(B, i , srvs );
-			if(i==0) std:: cout << "result" << std::endl;
+			//if(i==0) std:: cout << "A" << std::endl;
+			//print_all_of_tabel(A, i , srvs );
+			//if(i==0) std:: cout << "B" << std::endl;
+			//print_all_of_tabel(B, i , srvs );
+			//if(i==0) std:: cout << "result" << std::endl;
 			print_all_of_tabel(result, i , srvs );
 			if (i == 0)  {
   
@@ -244,12 +245,12 @@ void use_case1(u32 rows = 10, u32 cols = 3, u32 intersect = 3 )  {
 }
 
 int main(int argc, char* argv[]){
-	if(argc == 4){
-		use_case1( atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
+	if(argc == 2){
+		use_case1( atoi(argv[1]), atoi(argv[2]));
 	}
 	else{
 
-		use_case1();
+		std::cout << "two inputs pls" << std::endl;
 	}
 
 }
