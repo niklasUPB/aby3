@@ -167,8 +167,8 @@ void use_case2(u32 rows = 10,  u32 intersect = 5)
 	
 	Timer t;
 	bool failed = false;
-	print_all_of_Table(a);
-	print_all_of_Table(b);
+	//print_all_of_Table(a);
+	//print_all_of_Table(b);
 	auto getIntermediate =[&] (int i, int filter){
 		SharedTable A;
 		SharedTable B;
