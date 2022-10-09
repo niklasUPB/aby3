@@ -214,7 +214,7 @@ void use_case1(u32 rows = 10, u32 intersect = 3)  {
 			//if(i==0) std:: cout << "B" << std::endl;
 			//print_all_of_tabel(B, i , srvs );
 			//if(i==0) std:: cout << "result" << std::endl;
-			print_all_of_tabel(result, i , srvs );
+			//print_all_of_tabel(result, i , srvs );
 			if (i == 0)  {
   
 				t.setTimePoint("reveal");
