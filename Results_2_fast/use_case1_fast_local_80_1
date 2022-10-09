@@ -1,0 +1,15 @@
+n = 80   107934
+Label                   Time (ms)  diff (ms)
+__________________________________
+start                         0.0      0.034  
+start                         0.1      0.069  
+first_intermediate           97.9     97.827  **********
+first_intermediate           97.9      0.000  
+first_intermediate           98.1      0.207  
+second_intermediate         190.8     92.673  **********
+second_intermediate         190.8      0.014  
+second_intermediate         190.9      0.040  
+UNION                       279.5     88.622  **********
+UNION                       279.6      0.078  
+UNION                       279.6      0.012  
+

@@ -1,0 +1,28 @@
+-- Boost_LIB: Boost::system;Boost::thread
+-- Boost_INC: /home/aby3/thirdparty/unix/include
+
+
+-- EIGEN_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+-- JSON_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+-- FUNCTION2_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/aby3/out/build/linux/CMakeFiles/CMakeOutput.log".
+-- Boost_LIB: Boost::system;Boost::thread
+-- Boost_INC: /home/aby3/thirdparty/unix/include
+
+
+-- EIGEN_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+-- JSON_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+-- FUNCTION2_INCLUDE_DIR=/home/aby3/thirdparty/unix/include
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/aby3/out/build/linux/CMakeFiles/CMakeOutput.log".
+======= build.py (aby3) ==========
+mkdir -p out/build/linux
+cmake -S . -B out/build/linux  -DCMAKE_BUILD_TYPE=Release
+cmake --build out/build/linux   --parallel 4 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
