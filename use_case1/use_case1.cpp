@@ -245,7 +245,7 @@ void use_case1(u32 rows = 10, u32 intersect = 3)  {
 }
 
 int main(int argc, char* argv[]){
-	if(argc == 2){
+	if(argc == 3){
 		use_case1( atoi(argv[1]), atoi(argv[2]));
 	}
 	else{
