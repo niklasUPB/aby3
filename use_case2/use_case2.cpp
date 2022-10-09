@@ -140,7 +140,7 @@ void use_case2(u32 rows = 10,  u32 intersect = 5)
 		First_Select_collumns.emplace_back(SharedTable::ColRef(intersection , intersection.mColumns[1]) );
 		First_Select_collumns.emplace_back(SharedTable::ColRef(intersection , intersection.mColumns[2]) );
 		auto result =srvs[i].join( SharedTable::ColRef( intersection , intersection.mColumns[0]) , SharedTable::ColRef( C, C.mColumns[0]  ), First_Select_collumns);
-		print_all_of_SharedTabel(result, i, srvs);
+		//print_all_of_SharedTabel(result, i, srvs);
 	};
 	auto t0 = std::thread(routine, 0);
 	auto t1 = std::thread(routine, 1);
