@@ -1,0 +1,38 @@
+n = 40   68448
+Label                   Time (ms)  diff (ms)
+__________________________________
+start                         0.0      0.029  
+start                         0.0      0.016  
+first_intermediate           98.8     98.788  **********
+first_intermediate           98.9      0.029  
+first_intermediate           98.9      0.046  
+second_intermediate         198.1     99.181  **********
+second_intermediate         198.3      0.174  
+second_intermediate         198.3      0.035  
+UNION                       287.0     88.707  **********
+UNION                       287.0      0.040  
+UNION                       287.1      0.004  
+
+	Command being timed: "./use_case2_fast 40 20"
+	User time (seconds): 0.70
+	System time (seconds): 0.13
+	Percent of CPU this job got: 279%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.29
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 35288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21233
+	Voluntary context switches: 2964
+	Involuntary context switches: 961
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
