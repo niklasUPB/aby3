@@ -1,0 +1,44 @@
+n = 128000   230320645
+Label                       Time (ms)  diff (ms)
+__________________________________
+start                             0.0      0.018  
+start                             0.0      0.019  
+inputs                           32.4     32.374  *****
+intersect_start                  32.4      0.006  
+intersect_preamble               38.5      6.097  ***
+intersect_compute_keys         1065.1   1026.558  **********
+intersect_cuckoo_hash          1093.8     28.727  *****
+intersect_select_cuckoo        1285.7    191.889  ********
+intersect_compare              1370.8     85.058  ******
+intersect_done                 1371.3      0.549  
+intersect_start                1379.8      8.498  ***
+intersect_preamble             1382.4      2.608  *
+intersect_compute_keys         1842.7    460.314  *********
+intersect_cuckoo_hash          1854.3     11.588  ****
+intersect_select_cuckoo        1911.5     57.159  ******
+intersect_compare              1935.4     23.954  *****
+intersect_done                 1935.6      0.175  
+
+	Command being timed: "./use_case2 128000 64000"
+	User time (seconds): 4.58
+	System time (seconds): 0.84
+	Percent of CPU this job got: 274%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1014648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 65047
+	Voluntary context switches: 6744
+	Involuntary context switches: 2879
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

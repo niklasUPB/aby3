@@ -1,0 +1,38 @@
+n = 2048000   2228235556
+Label                   Time (ms)  diff (ms)
+__________________________________
+start                        -0.0     -0.007  
+start                         0.0      0.032  
+first_intermediate        14046.2  14046.153  **********
+first_intermediate        14056.3     10.139  **
+first_intermediate        14057.2      0.850  
+second_intermediate       28056.1  13998.920  **********
+second_intermediate       28056.4      0.279  
+second_intermediate       28062.1      5.727  **
+UNION                     30659.7   2597.606  ********
+UNION                     30660.7      1.001  
+UNION                     30661.1      0.401  
+
+	Command being timed: "./use_case2_fast 2048000 1024000"
+	User time (seconds): 80.02
+	System time (seconds): 8.29
+	Percent of CPU this job got: 285%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8353212
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 124561
+	Voluntary context switches: 28538
+	Involuntary context switches: 9456
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
