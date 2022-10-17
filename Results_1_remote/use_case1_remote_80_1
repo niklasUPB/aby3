@@ -1,0 +1,39 @@
+n = 80   112454
+Label                       Time (ms)  diff (ms)
+__________________________________
+start                             0.1      0.056  
+start                             0.1      0.021  
+inputs                         1405.7   1405.630  **********
+intersect_start                1405.7      0.014  
+intersect_preamble             1405.7      0.011  
+intersect_compute_keys         2869.1   1463.381  **********
+intersect_cuckoo_hash          2869.2      0.041  
+intersect_select_cuckoo        4177.8   1308.594  **********
+intersect_compare              5084.0    906.215  *********
+intersect_done                 5084.1      0.151  
+intersect                      5084.1      0.008  
+reveal                         5084.1      0.000  
+
+	Command being timed: "./use_case1_remote 80 40"
+	User time (seconds): 0.27
+	System time (seconds): 0.04
+	Percent of CPU this job got: 6%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9257
+	Voluntary context switches: 1711
+	Involuntary context switches: 477
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
